@@ -32,7 +32,7 @@ namespace SEACBE.Controllers
             return new JsonResult(GetSolicitudViewModel.FromSolicitud(soli));
         }
         [HttpPost]
-        public Solicitud CrearSolicitud([FromForm]Solicitud solicitud) 
+        public Solicitud CrearSolicitud([FromBody]Solicitud solicitud) 
         {
             return _service.CrearSolicitud(solicitud);
         }

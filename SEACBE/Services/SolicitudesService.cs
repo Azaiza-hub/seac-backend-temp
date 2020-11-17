@@ -25,11 +25,6 @@ namespace SEACBE.Services
 
         public Solicitud CrearSolicitud(Solicitud solicitud)
         {
-            using (var stream = new MemoryStream())
-            {
-                solicitud.ImagenForm.CopyTo(stream);
-                solicitud.Imagen = stream.ToArray();
-            }
             return _repo.CrearSolicitud(solicitud);
         }
 
