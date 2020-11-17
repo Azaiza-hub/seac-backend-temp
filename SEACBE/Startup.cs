@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SEACBE.Repositories;
 using SEACBE.Services;
+using SEACBE.Middlewares;
 
 namespace SEACBE
 {
@@ -34,6 +35,8 @@ namespace SEACBE
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors(options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()) ;
+
+            app.UseMiddleware<RequestLogger>();
 
             app.UseRouting();
 
