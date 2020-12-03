@@ -10,10 +10,12 @@ namespace SEACBE.Controllers
     public class SolicitudesController : ControllerBase
     {
         private ISolicitudesService _service;
+  
         public SolicitudesController(ISolicitudesService service)
         {
             _service = service;
         }
+
         [HttpGet]
         public GetSolicitudesViewModel Get()
         {
@@ -32,7 +34,7 @@ namespace SEACBE.Controllers
             return new JsonResult(GetSolicitudViewModel.FromSolicitud(soli));
         }
         [HttpPost]
-        public Solicitud CrearSolicitud([FromBody]Solicitud solicitud) 
+        public Solicitud CrearSolicitud([FromBody]Solicitud solicitud)
         {
             return _service.CrearSolicitud(solicitud);
         }

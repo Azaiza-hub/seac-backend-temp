@@ -12,6 +12,8 @@ namespace SEACBE.Models.ViewModels
         public string Descripcion { get; set; }        
         public DateTime Fecha { get; set; }
         public string Estado { get; set; }
+        public string Clasificacion { get; set; }
+        public string Sentimentalismo { get; set; }
     }
     public class GetSolicitudesViewModel : List<GetSolicitudesItem>
     {
@@ -26,7 +28,9 @@ namespace SEACBE.Models.ViewModels
                     Location = solicitud.Location,
                     Descripcion = solicitud.Descripcion,
                     Fecha = solicitud.Fecha,
-                    Estado = solicitud.Estado
+                    Estado = solicitud.Estado,
+                    Clasificacion = solicitud.Clasificacion,
+                    Sentimentalismo = solicitud.Sentimentalismo
                 });
 
             }
