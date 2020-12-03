@@ -10,5 +10,7 @@ namespace SEACBE.Models
         public byte[] Imagen { get; set; }
         public DateTime Fecha { get; set; }
         public string Estado { get; set; }
+        public string Clasificacion { get; set; }
+        public string Sentimentalismo { get; set; }
     }
 }

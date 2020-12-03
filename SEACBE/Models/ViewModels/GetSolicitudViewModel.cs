@@ -13,6 +13,8 @@ namespace SEACBE.Models.ViewModels
         public Byte[] Imagen { get; set; }
         public DateTime Fecha { get; set; }
         public string Estado { get; set; }
+        public string Clasificacion { get; set; }
+        public string Sentimentalismo { get; set; }
 
         public static GetSolicitudViewModel FromSolicitud(Solicitud solicitud)
         {
@@ -23,7 +25,9 @@ namespace SEACBE.Models.ViewModels
                 Descripcion = solicitud.Descripcion,
                 Imagen = solicitud.Imagen,
                 Fecha = solicitud.Fecha,
-                Estado = solicitud.Estado
+                Estado = solicitud.Estado,
+                Clasificacion = solicitud.Clasificacion,
+                Sentimentalismo = solicitud.Sentimentalismo
             };
         }
     }
